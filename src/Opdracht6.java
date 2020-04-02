@@ -7,8 +7,8 @@ public class Opdracht6 {
 
         ArrayList<Integer> inputNumbers = new ArrayList<Integer>();
 
-        for (int i = 0; i < 10; i++){
-            System.out.println("number" + (i+1));
+        for (int i = 0; i < 5; i++){
+            System.out.println("give number " + (i+1));
             inputNumbers.add(scanner.nextInt());
         }
 
