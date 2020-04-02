@@ -26,7 +26,7 @@ public class Opdracht11{
         Integer quantity = scanner.nextInt();
 
         Integer itemPrice = retailPrice.get(productNumber.indexOf(productGiven));
-        
+
         double outputvalue = quantity * itemPrice;
         outputvalue /=100;
 
