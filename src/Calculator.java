@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 
 public class Calculator extends JFrame implements ActionListener {
     JLabel display = new JLabel("");
+    //JTextPane
 
     public Calculator(){
         JPanel panel = new JPanel();
