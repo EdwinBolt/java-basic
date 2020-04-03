@@ -13,7 +13,7 @@ public class Calculator extends JFrame implements ActionListener {
         panel.setLayout(new GridLayout(4,4));
         getContentPane().add(panel, BorderLayout.CENTER);
         getContentPane().add(display, BorderLayout.NORTH);
- 
+
         String[] labels = {
                 "7", "8", "9", "/",
                 "4", "5", "6", "*",
