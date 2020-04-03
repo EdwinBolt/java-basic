@@ -8,6 +8,6 @@ public class Opdracht15 {
             }
         }
 
-        System.out.println(sum);
+        System.out.println(sum); 
     }
 }
