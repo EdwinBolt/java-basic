@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 
 public class Calculator extends JFrame implements ActionListener {
     JLabel display = new JLabel("");
+    boolean clearScreen = false;
     //JTextPane
 
     public Calculator(){
@@ -35,11 +36,17 @@ public class Calculator extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+
         String currentButton = e.getActionCommand();
         switch (currentButton){
             case "0":  case "1":  case "2":  case "3":  case "4": case "5":  case "6":  case "7":  case "8": case "9":
+                System.out.println(clearScreen);
+                if (clearScreen == true){
+                    display.setText("");
+                    clearScreen = false;
+                }
                 if (prefix ==0.0)
-                    display.setText(currentButton);
+                    display.setText(display.getText() + currentButton);
                 else
                     display.setText(display.getText()+currentButton);
                 break;
@@ -73,7 +80,6 @@ public class Calculator extends JFrame implements ActionListener {
 
                 switch (operator){
                     case "+":
-                        System.out.println("+");
                         result =number1+number2;
                         break;
                     case"-":
