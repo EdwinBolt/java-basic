@@ -92,8 +92,8 @@ public class TicTacToe extends JFrame {
 
                                 // min-max computer move
                                 for (int i = 0; i< possibleIList.size(); i++){
-                                    boolean continueChecking = true;
-                                    boolean continue70 = true;
+                                   // boolean continueChecking = true;
+                                 //   boolean continue70 = true;
 
                                     int horizontalArray1 = (possibleIList.get(i) + 1) % 3;
                                     int horizontalArray2 = (possibleIList.get(i) + 2) % 3;
@@ -104,43 +104,79 @@ public class TicTacToe extends JFrame {
                                         //      System.out.println(1);
                                         if (field[possibleIList.get(i)][verticalArray1].getText() == "o"){
                                             moveScore[i]=100;
-                                            continueChecking = false;
+                                            //continueChecking = false;
                                         }
-                                        else if (field[possibleIList.get(i)][verticalArray1].getText() == "x"){
-                                            moveScore[i] = 70;
+                                         if (field[possibleIList.get(i)][verticalArray1].getText() == "x"){
+                                            if (moveScore[i] < 70)
+                                         moveScore[i] = 70;
                                         }
                                         else{
+                                            if (moveScore[i] < 0)
                                             moveScore[i] = 0;
                                         }
                                     }
-                                    if(continueChecking && field[horizontalArray1][possibleJList.get(i)].getText() == field[horizontalArray2][possibleJList.get(i)].getText()){
+
+                                    if (i==3) {
+                                        System.out.println("i = " + i);
+                                        System.out.println(horizontalArray1);
+                                        System.out.println(horizontalArray2);
+                                        System.out.println(verticalArray1);
+                                        System.out.println(verticalArray2);
+                                        System.out.println(possibleJList.get(i));
+                                        System.out.println(possibleIList.get(i));
+                                        System.out.println(field[horizontalArray1][possibleJList.get(i)].getText());
+                                        System.out.println(field[horizontalArray2][possibleJList.get(i)].getText());
+                                    }
+
+
+                                    if(field[horizontalArray1][possibleJList.get(i)].getText() == field[horizontalArray2][possibleJList.get(i)].getText()){
                                         //System.out.println(2);
                                         if (field[horizontalArray1][possibleJList.get(i)].getText() == "o"){
                                      //       System.out.println(2.1);
+                                            if (moveScore[i] < 100)
                                             moveScore[i] = 100;
-                                            continueChecking = false;
+                                            //continueChecking = false;
                                         }
-                                        else if (field[horizontalArray1][possibleJList.get(i)].getText() == "x"){
+                                        if (field[horizontalArray1][possibleJList.get(i)].getText() == "x"){
 
+                                            if (moveScore[i] < 70)
                                             moveScore[i] = 70;
-                                            continue70 = false;
+                                            //continue70 = false;
                                         }
                                         else{
 
+                                            if (moveScore[i] < 0)
                                             moveScore[i] = 0;
                                         }
                                     }
                                   //  System.out.println(3);
-                                    if (continueChecking && possibleIList.get(i) == 1 && possibleJList.get(i) == 1){
+                                    if (possibleIList.get(i) == 1 && possibleJList.get(i) == 1){
                                         if (field[0][0].getText() == field[2][2].getText()){
                                             if (field[0][0].getText() == "o") {
-                                                moveScore[i] = 100;
+
+                                                if (moveScore[i] < 100)
+                                                    moveScore[i] = 100;
                                             }
-                                            }else if(field[0][0].getText() == field[2][2].getText()){
-                                            if (field[0][0].getText() == "o") {
-                                                moveScore[i] = 70;
+                                        } if(field[0][0].getText() == field[2][2].getText()){
+                                            if (field[0][0].getText() == "x") {
+
+                                                if (moveScore[i] < 70)
+                                                    moveScore[i] = 70;
                                             }
+                                        }
+                                        if (field[0][2].getText() == field[2][0].getText()){
+                                            if (field[0][2].getText() == "o") {
+
+                                                if (moveScore[i] < 100)
+                                                    moveScore[i] = 100;
                                             }
+                                        } if(field[0][2].getText() == field[2][0].getText()){
+                                            if (field[2][0].getText() == "x") {
+
+                                                if (moveScore[i] < 70)
+                                                    moveScore[i] = 70;
+                                            }
+                                        }
 
                                         }
                                     System.out.println("possible i = " + possibleIList.get(i) + "; possible j = " + possibleJList.get(i) + "; movescore = " +moveScore[i]);
