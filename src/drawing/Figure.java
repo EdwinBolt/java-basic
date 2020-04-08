@@ -10,7 +10,7 @@ public abstract class Figure {
 
     public Color color;
 
-/*
+
     public void checkCoordinates(){
         if (x1 > x2){
             int temp = x1;
@@ -24,7 +24,7 @@ public abstract class Figure {
         }
     }
 
- */
+
 
 
     public abstract void draw (Graphics g);

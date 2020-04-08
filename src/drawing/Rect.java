@@ -6,6 +6,8 @@ public class Rect extends Figure{
 
     @Override
     public void draw (Graphics g){
+        checkCoordinates();
+        /*
         if (x1 > x2){
             int temp = x1;
             x1 = x2;
@@ -15,7 +17,7 @@ public class Rect extends Figure{
             int temp = y1;
             y1 = y2;
             y2 = temp;
-        }
+        }*/
         g.setColor(color);
         g.drawRect(x1, y1, x2-x1, y2-y1);
     }

@@ -64,6 +64,7 @@ public class Draw extends JFrame implements MouseListener, ActionListener {
 
         menuBar.add(menu);
 
+
         //String[] buttons = {"Color", "Undo"};
 
         menuItem = new JMenuItem("Color");
