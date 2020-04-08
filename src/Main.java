@@ -1,6 +1,8 @@
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("hello world");
+        int k = 2;
+        System.out.println((k+2)%3);
+        System.out.println((k+1)%3);
     }
 }
