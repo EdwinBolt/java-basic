@@ -26,9 +26,6 @@ public abstract class Figure {
 
  */
 
-    public void dot(){
-        System.out.println(".");
-    }
 
     public abstract void draw (Graphics g);
 }
