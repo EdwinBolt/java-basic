@@ -8,6 +8,8 @@ public abstract class Figure {
     int y1;
     int y2;
 
+    public Color color;
+
 /*
     public void checkCoordinates(){
         if (x1 > x2){

@@ -62,9 +62,9 @@ public class Draw extends JFrame implements MouseListener, ActionListener {
             menuItem.addActionListener( this);
         }
 
-
-        // add shape and clor menu to screen
         menuBar.add(menu);
+
+        //String[] buttons = {"Color", "Undo"};
 
         menuItem = new JMenuItem("Color");
         menuItem.addActionListener( this);
@@ -110,7 +110,6 @@ public class Draw extends JFrame implements MouseListener, ActionListener {
             case "Color":
                 Color initialColor=Color.RED;
                 chosenColor=JColorChooser.showDialog(this,"Select a color",initialColor);
-                //figure.setColor(Color);
 
                 break;
 
@@ -123,15 +122,14 @@ public class Draw extends JFrame implements MouseListener, ActionListener {
     @Override
     public void paint(Graphics g) {
 
-        g.setColor(chosenColor);
+        //g.setColor(chosenColor);
         super.paint(g);
 
-        for (Figure f : figures) {
-            f.draw(g);
+        for (int i= 0 ; i< figures.size(); i++){
+            //g.setColor(colors.get(i));
+            figures.get(i).draw(g);
         }
 
-
-        // figure.draw(g);
     }
 
 
@@ -141,6 +139,8 @@ public class Draw extends JFrame implements MouseListener, ActionListener {
 
         figure.x1 = e.getX();
         figure.y1= e.getY();
+
+        figure.color = chosenColor;
 
     }
 
