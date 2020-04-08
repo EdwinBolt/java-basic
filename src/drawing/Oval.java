@@ -5,6 +5,7 @@ import java.awt.*;
 public class Oval extends Figure{
     @Override
     public void draw (Graphics g){
+        checkCoordinates();
         /*
         if (x1 > x2){
             int temp = x1;
