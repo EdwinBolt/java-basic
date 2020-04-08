@@ -22,6 +22,7 @@ public class NumberGuessing extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         String guessedString = e.getActionCommand();
         int guessedNumber = Integer.parseInt(guessedString);
+       // System.out.println(guessedString);
         textField.setText("");
 
         if (correctAnswer == guessedNumber){
