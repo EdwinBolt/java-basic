@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+            .pageContent{
+                padding: 30pt;
+            }
+
+            .column{
+                float: left;
+                width: 30%;
+                padding: 10px;
+                text-align: center;
+            }
+
+            .row{
+                width: 100%;
+            }
+
+            .border{
+                border: black solid 2pt;
+                padding: 0px;
+                margin: 5px;
+            }
+
+            .row:after{
+                content:"";
+                display:table;
+                clear:both;
+            }
+
+            h1{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            h2{
+                padding: 20pt;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 30px;
+                background-color: rgba(60, 192, 60, 0.322);
+                margin: unset;
+            }
+
+            p.conclusion{
+                font-size: 30px;
+                font-weight: bolder;
+                color: darkslategray;
+                font-family: Arial, Helvetica, sans-serif;
+                text-shadow: 1px 1px red;
+                margin: unset;
+            }
+
+            img{
+                width: 80%;
+                height: auto;
+            }
+
+            li{
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                text-align: left;
+                margin-bottom: 10pt;
+            }
+
+            .dropdown{
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropdown-content{
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                  min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+    }
+
+           .dropdown:hover .dropdown-content{
+                display: block;
+            }
+
+            .desc {
+                padding: 15px;
+                text-align: center;
+            }
+
+        </style>
+</head>
+
+<body>
+<div class="pageContent">
+    <h1>Webopdracht</h1>
+    <div class="border">
+        <h2>Vogels</h2>
+        <div class="border">
+
+            <div class="row">
+                <div class="column">
+                    <div class="dropdown">
+                        <img src="https://vipmediacdn.nl/wp-content/uploads/sites/7/2019/01/shutterstock_366468623-730x413.jpg"/>
+                        <div class="dropdown-content">
+                            <p>Dit is een mus</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Klein</li>
+                        <li>Vriendelijk</li>
+                        <li>Je kan mensen blij maken met een spreekwoordelijk dood exemplaar</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <div class="dropdown">
+                        <img src="https://lh3.googleusercontent.com/-xw3p6SnDVYA/UvzKavZUkuI/AAAAAAAAEJk/vUs6CMfEJQY/s800/IMG_5348%2520zwarte%2520kraai.jpg"/>
+                        <div class="dropdown-content">
+                            <p>Dit is een kraai</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Zwart</li>
+                        <li>Gemeen</li>
+                        <li>Als je ze jong vangt kan je ze tam maken</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <div class="dropdown">
+                        <img src="https://www.scientias.nl/wp-content/uploads/2017/12/duif12.jpg"/>
+                        <div class="dropdown-content">
+                            <p>Dit is een duif</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Dom</li>
+                        <li>Vies</li>
+                        <li>Eigenlijk gewoon vliegende ratten</li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <p class="conclusion">Leuk</p></div>
+                <div class="column">
+                    <p class="conclusion">Medium</p></div>
+                <div class="column">
+                    <p class="conclusion">Ellende</p></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
